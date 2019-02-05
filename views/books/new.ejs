@@ -1,0 +1,29 @@
+<% include ../partial/header %>
+<div class="ui mamin container segment">
+    <h1 class="ui header">New Book</h1>
+    <form class="ui form" action="/books" method="POST">
+        <div class="field">
+            <label>Book Name</label>
+            <input type="text" name="book[title]" placeholder="Book Name">
+        </div>
+        <div class="field">
+            <label>Author</label>
+            <input type="text" name="book[author]" placeholder="Author">
+        </div>
+        <div class="field">
+            <label>ImageUrl</label>
+            <input type="text" name="book[image]" placeholder="ImageUrl">
+
+
+        </div>
+        <div class="field">
+            <label>Description</label>
+            <textarea name="book[body]"  placeholder="This is good book"></textarea>
+        </div>
+        
+
+        <button class="ui button" type="submit">Submit</button>
+    </form>
+</div>
+
+<% include ../partial/footer %>

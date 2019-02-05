@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>
+        Book finding App
+    </title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
+
+</head>
+<body>
+        <div class="ui secondary  menu">
+                <a class="item">
+                  Home
+                </a>
+                <a class="item active">
+                  Messages
+                </a>
+                <a class="item">
+                  Friends
+                </a>
+                <div class="right menu">
+                  <div class="item">
+                    <div class="ui icon input">
+                      <input type="text" placeholder="Search...">
+                      <i class="search link icon"></i>
+                    </div>
+                  </div>
+                  <% if(!curruser){%>
+                  <a class="ui item" href="/login">
+                    Login
+                  </a>
+                  <a class="ui item" href="/register">
+                    Sign Up
+                  </a>
+                  <% }else{ %>
+                    <a class="ui item" >
+                     Hello !<%= curruser.username%>
+                    </a>
+                  <a class="ui item" href="/logout">
+                    Logout
+                  </a>
+                  <% } %>
+                </div>
+              </div>
+   

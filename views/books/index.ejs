@@ -1,0 +1,21 @@
+<% include ../partial/header %>
+<h1><a href="/books/new" >New Post</a></h1>
+
+<% books.forEach(function(book){ %>
+<div>
+    <h2>
+        <%= book.title %>
+    </h2>
+    <img src=" <%= book.image %> ">
+    <div>
+        <span>
+            <%= book.author %></span>
+    </div>
+    <div>
+        <a href="/books/<%= book._id %>">Read more</a>
+        
+    </div>
+</div>
+<% }) %>
+
+<% include ../partial/footer %>
