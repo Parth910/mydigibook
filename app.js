@@ -10,7 +10,10 @@ var bodyParser = require("body-parser"),
     User = require("./Association/models/luser");
 
 
-mongoose.connect("mongodb://localhost/my_first_appnext", { useNewUrlParser: true });
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
+mongoose.connect("mongodb://tony4203:Parth107@mongodb-833-0.cloudclusters.net/bookapp?authSource=admin",{ useNewUrlParser: true } );
+
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -186,4 +189,7 @@ function isLoggedIn(req,res,next){
     res.redirect("/login");
 }
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 3000,function(){
+    console.log("start");
+    
+});
