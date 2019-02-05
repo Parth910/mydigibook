@@ -9,9 +9,9 @@ var bodyParser = require("body-parser"),
     passportLocalMongoose = require("passport-local-mongoose"),
     User = require("./Association/models/luser");
 
-
-mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
-mongoose.connect("mongodb://tony4203:Parth107@mongodb-833-0.cloudclusters.net/bookapp?authSource=admin",{ useNewUrlParser: true } );
+var url= process.env.DATABASEURL || "mongodb://localhost/my_first_appnext";
+mongoose.connect(url, { useNewUrlParser: true });
+// mongoose.connect("mongodb://tony4203:Parth107@mongodb-833-0.cloudclusters.net/bookapp?authSource=admin",{ useNewUrlParser: true } );
 
 
 app.set("view engine", "ejs");
