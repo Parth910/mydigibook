@@ -186,4 +186,4 @@ function isLoggedIn(req,res,next){
     res.redirect("/login");
 }
 
-app.listen(port);
+app.listen(process.env.PORT);
