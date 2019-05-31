@@ -1,7 +1,7 @@
-##This webapp is under development.
+## This webapp is under development.
 
-#Technologies Used
-Express
-NodeJs
-MongoDB
-Bootstrap
+# Technologies Used
+ Express,
+ NodeJs,
+ MongoDB,
+ Bootstrap
